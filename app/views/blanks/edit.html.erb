@@ -1,0 +1,11 @@
+<h1>Editing the <%= @blank.name %></h1>
+
+<%= form_for @blank do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :quantity %>
+  <%= f.number_field :quantity %>
+
+  <%= f.submit %>
+<% end %>

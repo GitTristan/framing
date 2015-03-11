@@ -1,0 +1,11 @@
+<h1>List of Blanks</h1>
+
+<ul>
+  <% @blanks.each do |blank| %>
+    <li><%= link_to "#{blank.name} #{blank.email} #{blank.pages}", blank_path(blank) %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'New Blank', new_blank_path %>
+
+<%= link_to 'Sign out', sign_out_path %>
