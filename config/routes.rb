@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
-   root 'blank#index'
+   root 'welcome#index'
 
+   resources :users, only: [:create]
    resources :blank
 
    get '/sign-up' => 'registrations#new'

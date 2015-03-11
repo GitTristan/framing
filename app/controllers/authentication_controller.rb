@@ -6,7 +6,7 @@ class AuthenticationsController < ApplicationController
     user = User.find_by(email: params[:email])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to shovels_path, notice: 'Successfully signed in'
+      redirect_to blanks_path, notice: 'Successfully signed in'
     else
       flash[:error] = 'User could not be authenticated. Please try again.'
       render :new

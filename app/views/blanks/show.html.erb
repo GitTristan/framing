@@ -1,0 +1,7 @@
+<h1>Blank Name: <%= @blank.name %></h1>
+<h1>Blank Email: <%= @blank.email %></h1>
+<h1>Blank Pages: <%= @blank.pages %></h1>
+
+<%= link_to 'Index', blanks_path %>
+<%= link_to 'Edit', edit_blank_path(@blank) %>
+<%= link_to 'Destroy', blank_path(@blank), method: :delete %>
